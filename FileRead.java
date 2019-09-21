@@ -12,7 +12,7 @@ public class FileRead {
 
 	public static List<String[]> reader(String file){
 		List<String[]> data = new LinkedList<>();
-		String str;
+
 		try {
 			br = new BufferedReader(new FileReader(file));
 			String dataLine;

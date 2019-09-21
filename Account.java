@@ -37,20 +37,21 @@ public abstract class Account implements InterestBaseRate {
     // Common Transactions 
     public void deposit(double amount){
         balance += amount;
-        System.out.println("CREDIT: N" +amount);
+        System.out.println(this.name + "\nCREDIT: N" +amount);
         printbalance();
     }
     
      public void withdraw(double amount){
         balance -= amount;
-        System.out.println("DEBIT: N" +amount);
+        System.out.println("\n" + this.name + "\nDEBIT : N" +amount);
         printbalance();
     }
     
-    public void transfer(double amount, String toWho){
-        balance -= amount;
-        System.out.println("TRANSFER TO " + toWho 
-                    + "\n DEBIT: N" + amount) ;
+    public void transfer(double amount, Account toWho){
+        this.balance -= amount;
+        toWho.balance += amount;
+        System.out.println("\n" + this.name + " TRANSFER TO " + toWho.name
+                    + "\nDEBIT: N" + amount) ;
         printbalance();
     }
     

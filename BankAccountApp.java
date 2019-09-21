@@ -34,7 +34,10 @@ public class BankAccountApp {
     	   }
     	   System.out.println("\n###########################\n");
     	   }
-      
+      accounts.get(1).deposit(5000);
+      accounts.get(1).transfer(2000, accounts.get(2));
+      System.out.println("###################################");
+      accounts.get(2).showInfo(accounts.get(2).acctNo);
     }
     
 }
